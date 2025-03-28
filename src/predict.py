@@ -37,6 +37,8 @@ class Predictor:
                 print(f"Model {model_name} could not be found.")
                 print(os.getcwd())
                 print(os.listdir())
+                print(os.listdir("./weights"))
+                print(os.listdir("weights\r"))
                 return None, None
 
         model_names = ["tiny", "base"]
