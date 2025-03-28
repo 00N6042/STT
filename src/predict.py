@@ -11,6 +11,7 @@ import numpy as np
 from whisper.model import Whisper, ModelDimensions
 from whisper.tokenizer import LANGUAGES
 from whisper.utils import format_timestamp
+import os
 
 
 class Predictor:
@@ -34,6 +35,8 @@ class Predictor:
                     return model_name, model
             except FileNotFoundError:
                 print(f"Model {model_name} could not be found.")
+                print(os.getcwd())
+                print(os.listdir())
                 return None, None
 
         model_names = ["tiny", "base"]
