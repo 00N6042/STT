@@ -13,6 +13,7 @@ RUN apt-get install ffmpeg -y
 
 # Download Models
 COPY builder/download_models.sh /download_models.sh
+RUN mkdir -p ./weights
 RUN chmod +x /download_models.sh && \
     /download_models.sh
 RUN rm /download_models.sh
